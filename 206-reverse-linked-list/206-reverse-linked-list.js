@@ -10,6 +10,7 @@
  * @return {ListNode}
  */
 const reverseList = (head) => {
+  if (!head) return null;
   let prev = null;
   let curr = head;
   while (curr) {
@@ -18,5 +19,6 @@ const reverseList = (head) => {
     prev = curr;
     curr = next;
   }
-  return prev;
+  head = prev;
+  return head;
 };
