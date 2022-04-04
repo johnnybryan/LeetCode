@@ -7,18 +7,18 @@ class Solution:
     def swapNodes(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
         
         first = second = None
-        runner = walker = head
+        fast = slow = head
         
         for i in range(1, k): 
-            runner = runner.next
+            fast = fast.next
             
-        first = runner
+        first = fast
         
-        while runner.next:
-            walker = walker.next
-            runner = runner.next
+        while fast.next:
+            slow = slow.next
+            fast = fast.next
         
-        second = walker
+        second = slow
         
         first.val, second.val = second.val, first.val
         
