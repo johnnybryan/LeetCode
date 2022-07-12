@@ -1,5 +1,6 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
+        # time: O(n) space: O(n)
         if len(s) != len(t): 
             return False
         s_map, t_map = {}, {}
@@ -11,4 +12,4 @@ class Solution:
                 return False
         return True
             
-        
+        # return Counter(s) == Counter(t)
