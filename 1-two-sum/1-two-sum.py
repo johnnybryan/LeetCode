@@ -6,3 +6,4 @@ class Solution:
             if diff in hash_map:
                 return [hash_map[diff], i]
             hash_map[n] = i
+        return
