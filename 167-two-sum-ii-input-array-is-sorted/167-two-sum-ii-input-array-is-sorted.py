@@ -1,4 +1,5 @@
 class Solution:
+    # TWO POINTERS
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         left, right = 0, len(nums)-1
         while left < right:
@@ -8,7 +9,14 @@ class Solution:
                 right -= 1
             else:
                 left += 1
-            
+    # HASH MAP
+    # def twoSum(self, numbers: List[int], target: int) -> List[int]:
+    #     d = {}
+    #     for i, n in enumerate(numbers):
+    #         diff = target - n
+    #         if diff in d:
+    #             return [d[diff], i + 1]
+    #         d[n] = i + 1
                 
                 
             
