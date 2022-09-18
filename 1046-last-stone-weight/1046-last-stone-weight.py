@@ -4,15 +4,13 @@ class Solution:
         heapq.heapify(heap)
         
         while len(heap) > 1:
-            # remove two stones
-            first = heapq.heappop(heap)
-            second = heapq.heappop(heap)
-            if first != second:
-                heapq.heappush(heap, first - second)
-            
+            y = heapq.heappop(heap) 
+            x = heapq.heappop(heap)
+            if x != y:
+                heapq.heappush(heap, y - x)
+        
         if len(heap) == 0:
             return 0
         return -1 * heap[0]
-            
                 
         
