@@ -4,5 +4,6 @@ class Solution:
         for idx, val in enumerate(nums):
             target_val = target_sum - val
             if target_val in sum_map:
-                return [sum_map[target_val], idx]
+                return [idx, sum_map[target_val]]
             sum_map[val] = idx
+        
