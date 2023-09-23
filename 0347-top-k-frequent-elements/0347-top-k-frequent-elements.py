@@ -1,6 +1,6 @@
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        freq_map, heap, top_k_els = {}, [], []
+        freq_map, heap, output = {}, [], []
         for num in nums:
             if num not in freq_map:
                 freq_map[num] = 0
@@ -9,7 +9,8 @@ class Solution:
             heapq.heappush(heap, (-val, key))
         for _ in range(k):
             item = heapq.heappop(heap)
-            top_k_els.append(item[1])
-        return top_k_els
+            output.append(item[1])
+        return output
+            
             
         
