@@ -6,7 +6,7 @@ class Solution:
             length = r - l
             area = min_height * length
             max_area = max(area, max_area)
-            if height[l] < height[r]:
+            if (height[l] < height[r]):
                 l += 1
             else:
                 r -= 1
